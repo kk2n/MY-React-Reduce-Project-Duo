@@ -17,6 +17,7 @@ const paths = require('./paths');
 //多入口
 let myEntryFiles = require('./entry.multiple.dev');
 let htmlPlugins =require('./entry.multiple.htmlPlugin.dev');
+console.log(htmlPlugins);
 //多入口end
 // Webpack uses `publicPath` to determine where the app is being served from.
 // In development, we always serve from the root. This makes config easier.
@@ -169,6 +170,34 @@ module.exports = {
                     // In production, we use a plugin to extract that CSS to a file, but
                     // in development "style" loader enables hot editing of CSS.
                     {
+                        test: /\.scss$/,
+                        use: [require.resolve('style-loader'),
+                            {
+                                loader: require.resolve('css-loader'),
+                                options: {
+                                    importLoaders: 1
+                                }
+                            },
+                            {
+                                loader: require.resolve('sass-loader')
+                            }
+                        ]
+                    },
+                    {
+                        test: /\.less$/,
+                        use: [require.resolve('style-loader'),
+                            {
+                                loader: require.resolve('css-loader'),
+                                options: {
+                                    importLoaders: 1
+                                }
+                            },
+                            {
+                                loader: require.resolve('less-loader')
+                            }
+                        ]
+                    },
+                    {
                         test: /\.css$/,
                         use: [
                             require.resolve('style-loader'),
@@ -199,6 +228,13 @@ module.exports = {
                                 }
                             }
                         ]
+                    },
+                    //编译css，less,不分离
+                    {
+                        test: /\.less/,
+                        use: [require.resolve('style-loader'),{
+                            loader: require.resolve('less-loader')
+                        }]
                     },
                     // "file" loader makes sure those assets get served by WebpackDevServer.
                     // When you `import` an asset, you get its (virtual) filename.

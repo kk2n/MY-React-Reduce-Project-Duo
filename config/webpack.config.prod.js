@@ -173,6 +173,66 @@ module.exports = {
           // use the "style" loader inside the async code so CSS from them won't be
           // in the main CSS file.
           {
+              test: /\.scss$/,
+              loader: ExtractTextPlugin.extract(
+                  Object.assign(
+                      {
+                          fallback: {
+                              loader: require.resolve('style-loader'),
+                              options: {
+                                  hmr: false,
+                              },
+                          },
+                          use: [
+                              {
+                                  loader: require.resolve('css-loader'),
+                                  options: {
+                                      importLoaders: 1,
+                                      minimize: true,
+                                      sourceMap: shouldUseSourceMap,
+                                  },
+                              },
+                              {
+                                  loader: require.resolve('sass-loader')
+                              },
+                          ],
+                      },
+                      extractTextPluginOptions
+                  )
+              ),
+              // Note: this won't work without `new ExtractTextPlugin()` in `plugins`.
+          },
+          {
+              test: /\.less$/,
+              loader: ExtractTextPlugin.extract(
+                  Object.assign(
+                      {
+                          fallback: {
+                              loader: require.resolve('style-loader'),
+                              options: {
+                                  hmr: false,
+                              },
+                          },
+                          use: [
+                              {
+                                  loader: require.resolve('css-loader'),
+                                  options: {
+                                      importLoaders: 1,
+                                      minimize: true,
+                                      sourceMap: shouldUseSourceMap,
+                                  },
+                              },
+                              {
+                                  loader: require.resolve('less-loader')
+                              },
+                          ],
+                      },
+                      extractTextPluginOptions
+                  )
+              ),
+              // Note: this won't work without `new ExtractTextPlugin()` in `plugins`.
+          },
+          {
             test: /\.css$/,
             loader: ExtractTextPlugin.extract(
               Object.assign(
