@@ -1,0 +1,433 @@
+@import "../comm-scss/short-sass/sscss-set";
+@import "../comm-scss/short-sass/sscss-mixin";
+@import "../comm-scss/bootstarp4/functions";
+@import "../comm-scss/bootstarp4/variables";
+@import "../comm-scss/bootstarp4/mixins";
+$path: "/common/img/";
+.con-main {
+    @include ss(() (p 40));
+}
+.buzou {
+    @include ss(() (ho 60)(bgc #D9D9D9));
+    & span {
+        @include ss((db) (w 20%)(fz 16)(lh 60px)(c #fff)(tac)(pr 3%) (fl));
+        &.wei {
+            @include ss((c #fff)(bg #D9D9D9 "b4.png" r));
+        }
+        &.wei1 {
+            @include ss((c #fff)(bgc #D9D9D9));
+        }
+        &.guo {
+            @include ss((c #6873e4) ());
+        }
+        &.guo1 {
+            @include ss((c #6873e4) (bg #CACFFF "b2.png" r));
+        }
+        &.guo2 {
+            @include ss((c #6873e4) (bg #CACFFF "b1.png" r));
+        }
+        &.on {
+            @include ss((bg #6873e4 "b3.png" r)(pr 20) (c #fff));
+        }
+        &.on1 {
+            @include ss((bgc #6873e4)(pr 20) (c #fff));
+        }
+    }
+}
+.f-title {
+    @include ss((h 86) (mt 40)(bgc #F7F7F7)(tac)(pt 20));
+}
+.tit-input {
+    @include ss((w 40%)(h 44)(bdrs 0 41 41 0) (bd 1px solid #3a82da)(fl)(p 0 40 0 20)(fz 18)(bgc));
+}
+.tit-but {
+    @include ss((w 10%)(zxw 150)(h 44)(bdrs 44 0 0 44)(bg #3a82da "but.png" 20 c)(ml 20%)(bd 0)(fl)(c #fff)(fz 18)(pl 50)(tal));
+}
+.filter {
+    @include ss(() (mt 20)(bgc)(bgc #F7F7F7)(h auto)(p 15 0));
+}
+.xuanze-ce {
+    @include ss(() (mt 20)(bgc)(bgc #F7F7F7)(h auto)(p 40 90));
+}
+.yuan-bb {
+    @include ss(() (who 309 309)(bg "z18.png")(jzc)(cup));
+    & em {
+        @include ss((db) (wh 50 50)(bg "z18t.png")(jzc)(mt 75));
+    }
+    & span {
+        @include ss((fz 21) (c #fff)(db)(lh 24px)(m 20 0));
+    }
+    & samp {
+        @include ss((fz 18)(wh 93 35) (c #f88b8b)(db)(bgc #fff)(bdrs 34)(lh 35px)(jzc));
+    }
+}
+.yuan-bb2 {
+    @include ss(() (who 309 309)(bg "z19.png")(jzc)(cup));
+    & em {
+        @include ss((db) (wh 50 50)(bg "z19t.png")(jzc)(mt 75));
+    }
+    & span {
+        @include ss((fz 21) (c #fff)(db)(lh 24px)(m 20 0)(tac));
+    }
+    & samp {
+        @include ss((fz 18)(wh 93 35) (c #EBBA48)(db)(bgc #fff)(bdrs 34)(lh 35px)(jzc));
+    }
+}
+.yuan-xia {
+    @include ss((wh)(mt 18)(bgc #fff)(bdrs 6)(jzc)(w 309)(por)(bd));
+    & i {
+        @include ss((db) (who 23 12)(bg "bg093644.png")(poa)(t -10)(jzc)(ml 146));
+    }
+    & .yi-xia-t {
+        @include ss(() (fz 18)(c #999)(pt 14)(ml 30)(tal));
+    }
+    & .yix-kec {
+        @include ss(() (who)(mt 10)(p 0 20 20));
+        & span {
+            @include ss((db) (who auto 30)(lh 30px)(c #fff)(bgc #BDC6CF)(fl)(bdrs 34)(mt 6)(mr 6)(p 0 18)(fz 16));
+        }
+    }
+}
+
+.ant-modal-content {
+    border-radius: 0;
+}
+.ant-modal-footer {
+    text-align: center;
+    border-top: 0;
+    padding: 20px;
+    & .ant-btn {
+        @include ss((p 0 18) (bdrs 0)(lhh 38)(fz 16));
+        &.ant-btn-primary {
+            @include ss(() (bgc #3782da));
+        }
+    }
+}
+.ant-modal-header {
+    border-bottom: 0;
+    & .ant-modal-title {
+        font-size: 18px;
+    }
+}
+.vertical-center-modal {
+    text-align: center;
+    white-space: nowrap;
+}
+
+.vertical-center-modal:before {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    width: 0;
+}
+
+.vertical-center-modal .ant-modal {
+    display: inline-block;
+    vertical-align: middle;
+    top: 0;
+    text-align: left;
+}
+.ban-ke {
+    @include ss(() (who)(bg "2fvf.png" l c)(pl 20)(cup));
+    & span {
+        @include ss((bgc #fff)(por)(pr 14)(c #303030)(fz 18) (z 1));
+    }
+    & i {
+        @include ss((por) (db)(bdt 1 dotted #ddd)(t -11)(z 0));
+    }
+    &.on-xia {
+        @include ss(()(bg "2fvf2.png" l c));
+    }
+}
+.quan-fan {
+    @include ss(() (who)(mt 24));
+    &.cls {
+        @include ss(() (mt 8));
+    }
+    & span {
+        @include ss((c #484848) (who 60 22)(db)(bd #ddd)(tac)(lh 20px)(fz 16)(fl)(mr 12)(cup));
+        &:hover {
+            @include ss(() (bgc #458bca)(c #fff)(bd #458bca));
+        }
+    }
+}
+.banji-cn {
+    @include ss(() (who)(p 0 20));
+
+  
+    & .nioanji-xuan {
+        @include ss((who) (mt 0));
+        & ul {
+            @include ss((who 100%) (mt 20)(fl)(fz 15)(pr 20));
+            &:nth-of-type(3n) {
+                margin-right: 0;
+                border-right: none;
+            }
+            & li {
+                @include ss((who 94%/3) (mr 3%) (bdr #ddd) (fl)(p 8 20 8 0));
+
+                & > span {
+                    @include ss((wh 80 18) (db)(fr)(mt 1));
+                }
+            }
+            & li:nth-child(3),
+            li:nth-child(6),
+            li:nth-child(9),
+            li:nth-child(12),
+            li:nth-child(15),
+            li:nth-child(18),
+            li:nth-child(21) {
+                @include ss(() (bdr 0) (mr 0));
+            }
+        }
+        &.him-tin {
+            @include ss(() (pt 12));
+            & ul {
+                @include ss(() (mt 0));
+                & li {
+                    @include ss(() (m 0)(lh 34px));
+                }
+            }
+        }
+    }
+    & .short-label .short-check + label {
+        @include ss((t 0.28rem) ());
+    }
+}
+.kemu,
+.class-c {
+    & .short-checks {
+        @include ss((w 100%) ());
+    }
+    & .short-label {
+        @include ss((w 27%) (mr 6%)(fl)(mt 10)(mb 10));
+    }
+    & .ant-checkbox-inner {
+        @include ss(() (bdrs 0)(wh 16 16)(t -2));
+        &::after {
+            @include ss(() (t 2));
+        }
+    }
+    & .ant-checkbox-checked .ant-checkbox-inner {
+        @include ss(()(bgc #fff));
+        &::after {
+            @include ss((bdc #3782da) ());
+        }
+    }
+}
+
+.kemu .ant-checkbox-group-item {
+    @include ss(() (w 30%)(fz 16)(bg "you102725.png" c c)(fl));
+}
+
+.class-c {
+    & .ant-checkbox-group-item {
+        @include ss(() (w 30%)(fz 16)(fl));
+    }
+    & .ant-checkbox-inner {
+        @include ss(() (bdrs 0)(wh 16 16)(t 0));
+        &::after {
+            @include ss(() (t 2));
+        }
+    }
+}
+
+//第二步
+.fileUp {
+    @include ss(() (who)(p 30 0 10));
+    & .mytips {
+        @include ss((p 10)(ml 10) (bg "tips-t.png" c c));
+    }
+}
+.two-tips {
+    & .ant-tooltip-inner {
+        @include ss((bgc #fff) (c #333)(fz 14));
+        box-shadow: 0 1px 20px rgba(0, 0, 0, 0.2);
+    }
+    & div.ant-tooltip-arrow {
+        border-top-color: #fff;
+    }
+}
+.upff-wen {
+    @include ss(() (who)(mt 20));
+    & .ant-btn {
+        @include ss((lhh 34) (fz 16)(bdrs 0)(bgc #3782da)(c #fff)(bd 0)(cup));
+        & i {
+            @include ss((dn) ());
+        }
+    }
+    & .ant-upload-list-item-name {
+        @include ss((fz 16) ());
+    }
+    & .ant-upload-list-item-progress {
+        @include ss((mt 12) ());
+    }
+    & .ant-upload-list-item {
+        @include ss((h 34) ());
+    }
+    & .moban-dang {
+        @include ss((di) (fz 16)(bg "tu-xia.png" l c)(pl 22)(ml 50));
+        & a{
+          @include ss(() (c #3782da));
+        }
+    }
+    & .mob-xia {
+        @include ss((c #999) (fz 14)(lhh 48));
+    }
+}
+.layui-layer-lan {
+    &.layui-layer {
+        @include ss(() (bdrs 0));
+    }
+    & .layui-layer-title {
+        @include ss(() (bgc #3782da)(bdrs 0));
+    }
+    & .layui-layer-btn {
+        @include ss((tac) (bdt 0)(pb 20));
+        & .layui-layer-btn0 {
+            @include ss((p 0 16) (lhh 36)(lh 34px)(bdrs 0)(bgc #3782da)(c #fff)(fz 16));
+        }
+        & .layui-layer-btn1 {
+            @include ss((p 3 16) (lhh 36)(lh 32px)(bdrs 0));
+        }
+    }
+    & .layui-layer-content {
+        @include ss((fz 15) ());
+    }
+}
+.ti-d {
+    font-style: normal;
+    color: #3782da;
+}
+.jingtai-title {
+    @include ss(() (lhh 80)(tac)(bgc #F7F7F7)(m 40 0));
+    & h1 {
+        @include ss(() (lhh 80)(fw 100));
+    }
+}
+.short-c {
+    @include ss((fz 16) (p 20 0 20 20));
+    & .ant-checkbox-group-item {
+        & span {
+            @include ss(() (fz 16));
+        }
+    }
+    & .ant-checkbox-inner {
+        @include ss(() (bdrs 0)(wh 16 16)(t));
+        &::after {
+            @include ss(() (t 2));
+        }
+    }
+    & .ant-checkbox-checked .ant-checkbox-inner {
+        @include ss(()(bgc #fff));
+        &::after {
+            @include ss((bdc #3782da) ());
+        }
+    }
+}
+.tu-zs {
+    padding: 20px 0;
+}
+.tu-zs {
+    & ul {
+        @include ss((who) (zdw 1400)(mb 30));
+        & li {
+            @include ss(() (mt 50));
+        }
+    }
+}
+.wen1 {
+    @include ss((wh 30% 300)(mr 3%) (bg "tu1-wen-bg.png")(bgs 100% 100%)(tac)(p 30 30 50 50)(fl));
+}
+.wen2 {
+    @include ss((wh 30% 300)(mr 3%) (bg "tu2-wen-bg.png")(bgs 100% 100%)(tac)(p 30 30 50 50)(fl));
+}
+.wen3 {
+    @include ss((wh 30% 300)(mr 3%) (bg "tu3-wen-bg.png")(bgs 100% 100%)(tac)(p 30 30 50 50)(fl));
+}
+.wen4 {
+    @include ss((wh 30% 300)(mr 3%) (bg "tu4-wen-bg.png")(bgs 100% 100%)(tac)(p 30 30 50 50)(fl));
+}
+.wen5 {
+    @include ss((wh 30% 300)(mr 3%) (bg "tu5-wen-bg.png")(bgs 100% 100%)(tac)(p 30 30 50 50)(fl));
+}
+.wen6 {
+    @include ss((wh 30% 300)(mr 3%) (bg "tu6-wen-bg.png")(bgs 100% 100%)(tac)(p 30 30 50 50)(fl));
+}
+.kebiao-c {
+    @include ss((m 20 0) (w 100%)(bd) (fz 16)(tac));
+    & thead {
+        & tr {
+            @include ss(() ());
+            & th {
+                @include ss((p 6 14)(bdr 1)(bdb 1));
+                &:last-child {
+                    @include ss((bdr 0) ());
+                }
+            }
+        }
+    }
+    & tbody {
+        & tr {
+            @include ss(() ());
+            & td {
+                @include ss((p 6 14)(bdr 1)(bdb 1)(h 36));
+                &:last-child {
+                    @include ss((bdr 0) ());
+                }
+                &.td-type0 {
+                    @include ss((cup) (bg "tpye0.png" c c));
+                    &:hover {
+                        @include ss(() (bg #f0f0f0 "tpye0.png" c c));
+                    }
+                }
+                &.td-type1 {
+                    @include ss((cup) (bg "space.png" c c));
+                    &:hover {
+                        @include ss(() (bg #f0f0f0 "space.png" c c));
+                    }
+                }
+                &.td-type2 {
+                    @include ss((cup) (bg "tpey1.png" c c));
+                    &:hover {
+                        @include ss(() (bg #f0f0f0 "tpey1.png" c c));
+                    }
+                }
+                &.td-type3 {
+                    @include ss(() (bgc #f7f7f7));
+                    &::after {
+                        @include ss((con "选修") ());
+                    }
+                }
+                &.td2-type0 {
+                    @include ss(() (bgc #f7f7f7));
+                    &::after {
+                        @include ss((con "必修") ());
+                    }
+                }
+                &.td2-type1 {
+                    @include ss((cup) (bg "space.png" c c));
+                    &:hover {
+                        @include ss(() (bg #f0f0f0 "space.png" c c));
+                    }
+                }
+                &.td2-type2 {
+                    @include ss(() (bgc #f7f7f7));
+                    &::after {
+                        @include ss((con "必修") ());
+                    }
+                }
+                &.td2-type3 {
+                    @include ss((cup) (bg "tpey1.png" c c));
+                    &:hover {
+                        @include ss(() (bg #f0f0f0 "tpey1.png" c c));
+                    }
+                }
+            }
+        }
+    }
+}
+.ant-message{
+    @include ss(() (t 68));
+}
